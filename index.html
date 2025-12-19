@@ -1,61 +1,35 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Nguyễn Quý Marketing</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Auto Tool</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-<!-- HEADER -->
-<header class="header">
-  <div class="logo">Nguyễn Quý Marketing</div>
-  <div class="actions">
-    <button class="btn-outline">Sign in</button>
-    <button class="btn-primary">Get started</button>
-  </div>
-</header>
+<div class="max-w-xl mx-auto mt-20 bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-bold mb-4">Auto Post Tool</h2>
 
-<!-- NOTICE -->
-<div class="notice">
-  ⚠️ Đây là web tool demo – dùng cho mục đích cá nhân.
+  <textarea id="content"
+    class="w-full border p-2 rounded mb-3"
+    placeholder="Write something..."></textarea>
+
+  <textarea id="groups"
+    class="w-full border p-2 rounded mb-3"
+    placeholder="Group URLs (1 per line)"></textarea>
+
+  <label class="text-sm">Delay (ms)</label>
+  <input id="delay"
+    type="number"
+    value="3000"
+    class="w-full border p-2 rounded mb-4" />
+
+  <button id="run"
+    class="w-full bg-blue-500 text-white py-2 rounded">
+    POST
+  </button>
 </div>
 
-<!-- MAIN -->
-<main class="container">
-
-  <h2 class="section-title">FREE TOOLS & NO LOGIN REQUIRED</h2>
-
-  <div class="tool-grid">
-
-    <!-- TOOL CARD -->
-    <div class="card">
-      <h3>Auto Post Facebook Group</h3>
-      <p>Đăng bài vào nhiều group Facebook tự động.</p>
-      <button class="btn-primary" onclick="openTool()">Use this tool</button>
-    </div>
-
-    <div class="card">
-      <h3>Auto Join Facebook Group</h3>
-      <p>Tự động tham gia danh sách group.</p>
-      <button class="btn-primary" onclick="openTool()">Use this tool</button>
-    </div>
-
-    <div class="card">
-      <h3>Auto Comment Facebook</h3>
-      <p>Tự động comment vào bài viết.</p>
-      <button class="btn-primary" onclick="openTool()">Use this tool</button>
-    </div>
-
-  </div>
-
-</main>
-
-<script>
-function openTool() {
-  alert("Tool sẽ được gắn với Chrome Extension sau.");
-}
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
