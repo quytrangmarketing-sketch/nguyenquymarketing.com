@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nguyễn Quý Marketing - Auto Post FB Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h2>Auto Post Facebook Group</h2>
+</header>
+
+<div class="container">
+
+  <!-- POST CONFIG -->
+  <div class="post-box">
+    <textarea id="content" placeholder="Write something..."></textarea>
+
+    <input type="text" id="link" placeholder="Link to share" />
+
+    <div class="btn-row">
+      <button onclick="randomText()">Random Text</button>
+      <button onclick="randomImage()">Random Image</button>
+      <button onclick="randomVideo()">Random Video</button>
+    </div>
+
+    <div class="config">
+      <label>Thread</label>
+      <input type="number" id="thread" value="1">
+
+      <label>Delay (giây)</label>
+      <input type="number" id="delay" value="3">
+    </div>
+
+    <button class="post-btn" onclick="startPost()">POST</button>
+  </div>
+
+  <!-- GROUP LIST -->
+  <div class="group-box">
+    <h3>Danh sách Group</h3>
+    <div id="groupList"></div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
